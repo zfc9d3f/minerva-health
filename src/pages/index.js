@@ -22,6 +22,7 @@ const TitleTitle = styled.div`
   display: flex;
   margin-bottom: 0.8rem;
   border-bottom: 7px solid #21262e;
+  padding-left: 1rem;
 `
 const Left = styled.h1`
   padding: 0;
@@ -38,9 +39,10 @@ const Right = styled(Left)`
 const Text = styled.div`
   font-size: 1.4rem;
   font-family: "Merriweather", serif;
-  line-height: 1.65rem;
+  line-height: 1.6rem;
   letter-spacing: 1.5px;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `
 
 const Header = styled.div`
@@ -49,7 +51,7 @@ const Header = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-top: 1rem;
-  padding-right: 10rem;
+  padding-right: 6rem;
 `
 
 const HeaderLink = styled.a`
@@ -74,9 +76,9 @@ const IndexPage = () => (
       rel="stylesheet"
     />
     <Header>
-      <HeaderLink>About Us</HeaderLink>
-      <HeaderLink>Solutions</HeaderLink>
-      <HeaderLink>Insights</HeaderLink>
+      <HeaderLink>Why Minerva</HeaderLink>
+      <HeaderLink>Doctors & Locations</HeaderLink>
+      <HeaderLink>Health & Wellness</HeaderLink>
       <HeaderLink>Careers</HeaderLink>
     </Header>
     <Title>
@@ -85,12 +87,12 @@ const IndexPage = () => (
         <Right>HEALTH</Right>
       </TitleTitle>
       <Text>
-        We offer industry-leading distribution services, including thousands of
-        branded, generic and specialty pharmaceuticals, sophisticated online
-        ordering, and a full range of packaging solutions.
+        We operate the backbone of the healthcare supply chain. We drive the
+        future of local care delivery. We guide medical innovations to market.
+        This is what it means to create healthier futures.
       </Text>
     </Title>
-    <Background src="https://res.cloudinary.com/dg8szh4ec/image/upload/v1562020809/test2.svg"></Background>
+    <Background src="https://res.cloudinary.com/dg8szh4ec/image/upload/v1562021147/test2.svg"></Background>
   </Container>
 )
 
