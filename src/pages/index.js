@@ -1,5 +1,18 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
+
+const Global = createGlobalStyle`
+  @keyframes toTop {
+    0%{
+      opacity: 0;
+      transform: translateY(5rem)
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0rem)
+    }
+  }
+`
 
 const Background = styled.img`
   z-index: -1;
@@ -23,6 +36,9 @@ const TitleTitle = styled.div`
   margin-bottom: 0.8rem;
   border-bottom: 7px solid #21262e;
   padding-left: 1rem;
+  animation-name: toTop;
+  animation-duration: 700ms;
+  animation-timing-function: ease-out;
 `
 const Left = styled.h1`
   padding: 0;
@@ -43,6 +59,12 @@ const Text = styled.div`
   letter-spacing: 1.5px;
   padding-left: 1rem;
   padding-right: 1rem;
+  animation-name: toTop;
+  animation-duration: 700ms;
+  animation-timing-function: ease-out;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
 `
 
 const Header = styled.div`
@@ -71,6 +93,7 @@ const HeaderLink = styled.a`
 
 const IndexPage = () => (
   <Container>
+    <Global />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:900|Merriweather:300i&display=swap"
       rel="stylesheet"
