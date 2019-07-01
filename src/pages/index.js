@@ -10,17 +10,18 @@ const Background = styled.img`
 const Container = styled.div`
   position: relative;
 `
-const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-top: 6%;
-  padding-left: 5%;
-  max-width: 50%;
-`
-
 const Title = styled.div`
   display: flex;
-  padding-bottom: 0.5rem;
+  flex-direction: column;
+  padding-top: 8rem;
+  padding-left: 5rem;
+  max-width: 45%;
+`
+
+const TitleTitle = styled.div`
+  display: flex;
+  margin-bottom: 0.8rem;
+  border-bottom: 7px solid #21262e;
 `
 const Left = styled.h1`
   padding: 0;
@@ -35,28 +36,61 @@ const Right = styled(Left)`
 `
 
 const Text = styled.div`
-  font-size: 1.5rem;
-  padding: ;
+  font-size: 1.4rem;
+  font-family: "Merriweather", serif;
+  line-height: 1.65rem;
+  letter-spacing: 1.5px;
+  padding-left: 0.5rem;
+`
+
+const Header = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1rem;
+  padding-right: 10rem;
+`
+
+const HeaderLink = styled.a`
+  font-family: "Merriweather", serif;
+  font-size: 1.3rem;
+  padding: 0.3rem 0rem 0.3rem 1rem;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &:visited,
+  &:active,
+  &:link {
+    color: #21262e;
+  }
 `
 
 const IndexPage = () => (
   <Container>
     <link
-      href="https://fonts.googleapis.com/css?family=Heebo:900|Kanit:800|Montserrat:900|Noto+Sans|Open+Sans:800&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat:900|Merriweather:300i&display=swap"
       rel="stylesheet"
     />
     <Header>
-      <Title>
+      <HeaderLink>About Us</HeaderLink>
+      <HeaderLink>Solutions</HeaderLink>
+      <HeaderLink>Insights</HeaderLink>
+      <HeaderLink>Careers</HeaderLink>
+    </Header>
+    <Title>
+      <TitleTitle>
         <Left>MINERVA</Left>
         <Right>HEALTH</Right>
-      </Title>
+      </TitleTitle>
       <Text>
         We offer industry-leading distribution services, including thousands of
         branded, generic and specialty pharmaceuticals, sophisticated online
         ordering, and a full range of packaging solutions.
       </Text>
-    </Header>
-    <Background src="https://res.cloudinary.com/dg8szh4ec/image/upload/v1561796730/test2.svg"></Background>
+    </Title>
+    <Background src="https://res.cloudinary.com/dg8szh4ec/image/upload/v1562020809/test2.svg"></Background>
   </Container>
 )
 
