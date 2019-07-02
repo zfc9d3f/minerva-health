@@ -33,6 +33,14 @@ const Title = styled.div`
   padding-top: 7rem;
   padding-left: 5rem;
   max-width: 45%;
+
+  @media (max-width: 1600px) {
+    padding-top: 5rem;
+  }
+  @media (max-width: 1400px) {
+    padding-top: 1.5rem;
+    padding-left: 3rem;
+  }
 `
 
 const TitleTitle = styled.div`
@@ -44,6 +52,10 @@ const TitleTitle = styled.div`
   animation-timing-function: ease-out;
   padding-bottom: 0.4rem;
   /* justify-content: center; */
+  @media (max-width: 1600px) {
+    border-bottom: 5px solid #21262e;
+    margin-bottom: 0.5rem;
+  }
 `
 const Left = styled.h1`
   padding: 0;
@@ -51,10 +63,16 @@ const Left = styled.h1`
   font-family: "Montserrat", sans-serif;
   font-size: 3.5rem;
   color: #21262e;
+  @media (max-width: 1400px) {
+    font-size: 2.8rem;
+  }
 `
 
 const Right = styled(Left)`
   color: #606e85;
+  @media (max-width: 1400px) {
+    font-size: 2.8rem;
+  }
 `
 
 const Text = styled.div`
@@ -70,6 +88,11 @@ const Text = styled.div`
   animation-fill-mode: forwards;
   opacity: 0;
   padding-left: 0.5rem;
+
+  @media (max-width: 1600px) {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
 `
 
 const Header = styled.div`
@@ -121,6 +144,9 @@ const HeaderLink = styled.a`
   &:link {
     color: #21262e;
   }
+  @media (max-width: 1400px) {
+    font-size: 1.1rem;
+  }
 `
 
 const Links = styled.div`
@@ -128,12 +154,13 @@ const Links = styled.div`
 `
 
 const Card = styled.div`
-  height: 23.5rem;
+  height: 25rem;
   width: 25%;
   background-color: #21262e;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 4px;
 `
 
 const CardText = styled.div`
@@ -166,6 +193,8 @@ const CardButton = styled.button`
 const CardImg = styled.img`
   width: 100%;
   margin-bottom: 0rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 `
 
 const CardContainer = styled.div`
