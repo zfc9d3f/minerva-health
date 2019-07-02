@@ -30,7 +30,7 @@ const Container = styled.div`
 const Title = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 8rem;
+  padding-top: 7rem;
   padding-left: 5rem;
   max-width: 45%;
 `
@@ -58,10 +58,10 @@ const Right = styled(Left)`
 `
 
 const Text = styled.div`
-  font-size: 1.5rem;
-  font-family: "Gentium Book Basic", sans-serif;
-  line-height: 2rem;
-  letter-spacing: 1.5px;
+  font-size: 1.4rem;
+  font-family: "Merriweather", sans-serif;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
   animation-name: toTop;
   padding-right: 0.5rem;
   animation-duration: 700ms;
@@ -128,15 +128,44 @@ const Links = styled.div`
 `
 
 const Card = styled.div`
-  height: 30rem;
+  height: 23.5rem;
   width: 25%;
-  background-color: black;
+  background-color: #21262e;
   display: flex;
   flex-direction: column;
+  align-items: center;
+`
+
+const CardText = styled.div`
+  color: #e1e5ea;
+  font-family: "Merriweather", serif;
+  font-size: 1.1rem;
+  padding: 1.3rem;
+  line-height: 1.6rem;
+`
+
+const CardButton = styled.button`
+  outline: none;
+  border: 3px solid #e1e5ea;
+  border-radius: 4px;
+  background-color: #e1e5ea;
+  color: #21262e;
+  font-family: "Lora", serif;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  margin-left: 6rem;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in;
+  cursor: pointer;
+  &:hover {
+    background-color: #21262e;
+    color: #e1e5ea;
+  }
 `
 
 const CardImg = styled.img`
   width: 100%;
+  margin-bottom: 0rem;
 `
 
 const CardContainer = styled.div`
@@ -177,6 +206,11 @@ const IndexPage = () => (
       <CardContainer>
         <Card>
           <CardImg src="https://res.cloudinary.com/dg8szh4ec/image/upload/w_400/c_crop,w_400,h_200/q_auto/v1562101917/pexels-photo-668298.jpg" />
+          <CardText>
+            Our partners and clients have specific and complicated use cases,
+            find out how we solve these problems.
+          </CardText>
+          <CardButton>Learn More</CardButton>
         </Card>
 
         <Card>
