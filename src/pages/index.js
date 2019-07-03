@@ -22,6 +22,12 @@ const Background = styled.img`
   position: absolute;
   top: 0;
   left: 0;
+  @media (max-width: 1200px) {
+    margin-top: 4rem;
+  }
+  @media (max-width: 1000px) {
+    margin-top: 13rem;
+  }
 `
 const Container = styled.div`
   position: relative;
@@ -33,6 +39,7 @@ const Title = styled.div`
   padding-top: 7rem;
   padding-left: 5rem;
   max-width: 45%;
+  min-width: 480px;
 
   @media (max-width: 1600px) {
     padding-top: 5rem;
@@ -41,9 +48,16 @@ const Title = styled.div`
     padding-top: 1.5rem;
     padding-left: 3rem;
   }
+  @media (max-width: 1000px) {
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    padding-left: 0rem;
+  }
 `
 
 const TitleTitle = styled.div`
+  min-width: 480px;
   display: flex;
   margin-bottom: 0.8rem;
   border-bottom: 7px solid #21262e;
@@ -93,6 +107,10 @@ const Text = styled.div`
     font-size: 1.2rem;
     line-height: 1.6rem;
   }
+  @media (max-width: 1200px) {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
 `
 
 const Header = styled.div`
@@ -102,6 +120,12 @@ const Header = styled.div`
   align-items: center;
   padding-top: 1rem;
   padding-right: 6rem;
+  @media (max-width: 1400px) {
+    padding-right: 3rem;
+  }
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
 `
 
 const LearnButton = styled.button`
@@ -129,6 +153,11 @@ const LearnButton = styled.button`
     color: #e1e5ea;
     background-color: #21262e;
   }
+
+  @media (max-width: 1600px) {
+    font-size: 1.2rem;
+    width: 10rem;
+  }
 `
 
 const HeaderLink = styled.a`
@@ -146,6 +175,7 @@ const HeaderLink = styled.a`
   }
   @media (max-width: 1400px) {
     font-size: 1.1rem;
+    padding-left: 1.5rem;
   }
 `
 
