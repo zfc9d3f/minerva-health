@@ -28,6 +28,9 @@ const Background = styled.img`
   @media (max-width: 1000px) {
     margin-top: 13rem;
   }
+  @media (max-width: 700px) {
+    width: 150%;
+  }
 `
 const Container = styled.div`
   position: relative;
@@ -38,7 +41,6 @@ const Title = styled.div`
   padding-top: 7rem;
   padding-left: 5rem;
   max-width: 45%;
-  min-width: 480px;
 
   @media (max-width: 1600px) {
     padding-top: 5rem;
@@ -53,10 +55,13 @@ const Title = styled.div`
     text-align: center;
     padding-left: 0rem;
   }
+  @media (max-width: 700px) {
+    max-width: none;
+    min-width: none;
+  }
 `
 
 const TitleTitle = styled.div`
-  min-width: 480px;
   display: flex;
   margin-bottom: 0.4rem;
   text-decoration: underline;
@@ -66,6 +71,10 @@ const TitleTitle = styled.div`
   /* justify-content: center; */
   @media (max-width: 1600px) {
     margin-bottom: 0.3rem;
+  }
+  @media (max-width: 700px) {
+    max-width: none;
+    min-width: none;
   }
 `
 const Left = styled.h1`
@@ -77,12 +86,18 @@ const Left = styled.h1`
   @media (max-width: 1400px) {
     font-size: 2.8rem;
   }
+  @media (max-width: 1000px) {
+    font-size: 2rem;
+  }
 `
 
 const Right = styled(Left)`
   color: #606e85;
   @media (max-width: 1400px) {
     font-size: 2.8rem;
+  }
+  @media (max-width: 1000px) {
+    font-size: 2rem;
   }
 `
 
@@ -107,6 +122,9 @@ const Text = styled.div`
     font-size: 1rem;
     line-height: 1.4rem;
   }
+  @media (max-width: 700px) {
+    padding: 0rem 1rem;
+  }
 `
 
 const Header = styled.div`
@@ -122,6 +140,9 @@ const Header = styled.div`
   @media (max-width: 1000px) {
     justify-content: center;
     padding-right: 0rem;
+  }
+  @media (max-width: 800px) {
+    display: none;
   }
 `
 
@@ -197,9 +218,16 @@ const Card = styled.div`
     height: 23rem;
     width: 32%;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 900px) {
     width: 50%;
     margin-bottom: 1rem;
+  }
+  @media (max-width: 700px) {
+    width: 70%;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 550px) {
+    width: 95%;
   }
 `
 
@@ -214,7 +242,9 @@ const CardText = styled.div`
   }
   @media (max-width: 1100px) {
     padding: 1rem;
-    text-align: justify;
+  }
+  @media (max-width: 900px) {
+    text-align: center;
   }
 `
 
@@ -275,7 +305,15 @@ const CardContainer = styled.div`
     margin-top: 25rem;
   }
   @media (max-width: 1000px) {
+    margin-top: 30rem;
+  }
+  @media (max-width: 900px) {
     flex-direction: column;
+    margin-top: 25rem;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-top: 16rem;
   }
 `
 
