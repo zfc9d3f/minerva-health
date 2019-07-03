@@ -33,10 +33,14 @@ const Background = styled.img`
     margin-top: 4rem;
   }
   @media (max-width: 1000px) {
-    margin-top: 13rem;
+    margin-top: 10rem;
   }
   @media (max-width: 700px) {
-    width: 150%;
+    margin-top: 14rem;
+    transform: scale(1.8) translateX(-3.2rem);
+  }
+  @media (max-width: 400px) {
+    margin-top: 15rem;
   }
 `
 const Container = styled.div`
@@ -61,6 +65,7 @@ const Title = styled.div`
     align-items: center;
     text-align: center;
     padding-left: 0rem;
+    max-width: 70%;
   }
   @media (max-width: 700px) {
     max-width: none;
@@ -160,7 +165,7 @@ const Header = styled.div`
     justify-content: center;
     padding-right: 0rem;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 650px) {
     display: none;
   }
 `
@@ -340,9 +345,6 @@ const CardContainer = styled.div`
   @media (max-width: 600px) {
     margin-top: 20rem;
   }
-  @media (max-width: 500px) {
-    margin-top: 16rem;
-  }
 `
 
 const IndexPage = () => (
@@ -408,9 +410,9 @@ const IndexPage = () => (
           <CardImg src="https://res.cloudinary.com/dg8szh4ec/image/upload/w_400/c_crop,w_400,h_200/v1562101917/pexels-photo-1170979.jpg" />
           <BottomCardContainer>
             <CardText>
-              Manufacturers turn to Minerva for customized commercialization
-              strategies that leverage our decades of industry experience,
-              ensuring products reach the patients who need them reliably
+              Manufacturers turn to Minerva for customized strategies that
+              leverage our decades of industry experience, ensuring products
+              reach the patients who need them reliably
             </CardText>
             <CardButton>
               Learn More{" "}
