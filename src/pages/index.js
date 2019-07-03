@@ -31,7 +31,6 @@ const Background = styled.img`
 `
 const Container = styled.div`
   position: relative;
-  height: 100vh;
 `
 const Title = styled.div`
   display: flex;
@@ -59,16 +58,14 @@ const Title = styled.div`
 const TitleTitle = styled.div`
   min-width: 480px;
   display: flex;
-  margin-bottom: 0.8rem;
-  border-bottom: 7px solid #21262e;
+  margin-bottom: 0.4rem;
+  text-decoration: underline;
   animation-name: toTop;
   animation-duration: 700ms;
   animation-timing-function: ease-out;
-  padding-bottom: 0.4rem;
   /* justify-content: center; */
   @media (max-width: 1600px) {
-    border-bottom: 5px solid #21262e;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
 `
 const Left = styled.h1`
@@ -90,18 +87,17 @@ const Right = styled(Left)`
 `
 
 const Text = styled.div`
-  font-size: 1.4rem;
-  font-family: "Merriweather", sans-serif;
-  line-height: 1.8rem;
-  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.7rem;
+  letter-spacing: 0.5px;
   animation-name: toTop;
-  padding-right: 0.5rem;
+
   animation-duration: 700ms;
   animation-timing-function: ease-out;
   animation-delay: 300ms;
   animation-fill-mode: forwards;
   opacity: 0;
-  padding-left: 0.5rem;
 
   @media (max-width: 1600px) {
     font-size: 1.2rem;
@@ -125,6 +121,7 @@ const Header = styled.div`
   }
   @media (max-width: 1000px) {
     justify-content: center;
+    padding-right: 0rem;
   }
 `
 
@@ -135,10 +132,9 @@ const LearnButton = styled.button`
   background-color: #e1e5ea;
   color: #21262e;
   margin-top: 1rem;
-  margin-left: 0.5rem;
-  font-family: "Lora", serif;
-  font-size: 1.5rem;
-  width: 13rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  width: 11rem;
   transition-duration: 150ms;
   animation-name: toTop;
   transition-timing-function: ease-in;
@@ -155,14 +151,14 @@ const LearnButton = styled.button`
   }
 
   @media (max-width: 1600px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     width: 10rem;
   }
 `
 
 const HeaderLink = styled.a`
-  font-family: "Lora", serif;
-  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
   padding: 0.3rem 0rem 0.3rem 2rem;
   &:hover {
     text-decoration: underline;
@@ -174,8 +170,11 @@ const HeaderLink = styled.a`
     color: #21262e;
   }
   @media (max-width: 1400px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-left: 1.5rem;
+  }
+  @media (max-width: 1000px) {
+    padding-top: 0rem;
   }
 `
 
@@ -184,39 +183,62 @@ const Links = styled.div`
 `
 
 const Card = styled.div`
-  height: 25rem;
-  width: 25%;
+  height: 28rem;
+  width: 30%;
   background-color: #21262e;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 4px;
+  @media (max-width: 1600px) {
+    height: 25rem;
+  }
+  @media (max-width: 1200px) {
+    height: 23rem;
+    width: 32%;
+  }
+  @media (max-width: 1000px) {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
 `
 
 const CardText = styled.div`
   color: #e1e5ea;
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
-  padding: 1.3rem;
+  padding: 1rem 3rem;
   line-height: 1.6rem;
+  @media (max-width: 1200px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 1100px) {
+    padding: 1rem;
+    text-align: justify;
+  }
 `
 
 const CardButton = styled.button`
+  width: 15rem;
   outline: none;
   border: 3px solid #e1e5ea;
   border-radius: 4px;
   background-color: #e1e5ea;
   color: #21262e;
-  font-family: "Lora", serif;
+  font-family: "Roboto", sans-serif;
   padding: 0.5rem 0.8rem;
   font-size: 1.2rem;
-  margin-left: 6rem;
   transition-duration: 150ms;
   transition-timing-function: ease-in;
   cursor: pointer;
   &:hover {
     background-color: #21262e;
     color: #e1e5ea;
+  }
+  @media (max-width: 1300px) {
+    width: 11rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 1.1rem;
   }
 `
 
@@ -226,14 +248,35 @@ const CardImg = styled.img`
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 `
+const BottomCardContainer = styled.div`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+  align-items: center;
+`
 
 const CardContainer = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 43rem;
+
+  @media (max-width: 1700px) {
+    margin-top: 35rem;
+  }
+  @media (max-width: 1500px) {
+    margin-top: 30rem;
+  }
+  @media (max-width: 1300px) {
+    margin-top: 25rem;
+  }
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `
 
 const IndexPage = () => (
@@ -265,11 +308,13 @@ const IndexPage = () => (
       <CardContainer>
         <Card>
           <CardImg src="https://res.cloudinary.com/dg8szh4ec/image/upload/w_400/c_crop,w_400,h_200/q_auto/v1562101917/pexels-photo-668298.jpg" />
-          <CardText>
-            Our partners and clients have specific and complicated use cases,
-            find out how we solve these problems.
-          </CardText>
-          <CardButton>Learn More</CardButton>
+          <BottomCardContainer>
+            <CardText>
+              Our partners and clients have specific and complicated use cases,
+              find out how we solve these problems.
+            </CardText>
+            <CardButton>Learn More</CardButton>
+          </BottomCardContainer>
         </Card>
 
         <Card>
