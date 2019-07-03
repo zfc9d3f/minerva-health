@@ -226,7 +226,7 @@ const Links = styled.div`
 `
 
 const Card = styled.div`
-  height: 28rem;
+  height: 30rem;
   width: 30%;
   background-color: #21262e;
   display: flex;
@@ -234,7 +234,7 @@ const Card = styled.div`
   align-items: center;
   border-radius: 4px;
   @media (max-width: 1600px) {
-    height: 25rem;
+    height: 28rem;
   }
   @media (max-width: 1200px) {
     height: 23rem;
@@ -313,7 +313,7 @@ const BottomCardContainer = styled.div`
 `
 
 const CardContainer = styled.div`
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -379,8 +379,9 @@ const IndexPage = () => (
           <CardImg src="https://res.cloudinary.com/dg8szh4ec/image/upload/w_400/c_crop,w_400,h_200/q_auto/v1562101917/pexels-photo-668298.jpg" />
           <BottomCardContainer>
             <CardText>
-              Our partners and clients have specific and complicated use cases,
-              find out how we solve these problems.
+              In addition to our comprehensive distribution services, our
+              solutions such as unit dose packaging and 340B consoluting improve
+              safety while growing health systems
             </CardText>
             <CardButton>
               Learn More{" "}
@@ -391,9 +392,31 @@ const IndexPage = () => (
 
         <Card>
           <CardImg src="https://res.cloudinary.com/dg8szh4ec/image/upload/w_400/c_crop,w_400,h_200/q_auto/v1562101917/doctor-medical-medicine-health-42273.jpg" />
+          <BottomCardContainer>
+            <CardText>
+              From independent pharmacies to large retail chains, our tailored
+              solutions help pharmacies optimize their business operations and
+              strengthen their position
+            </CardText>
+            <CardButton>
+              Learn More{" "}
+              <FontAwesomeIcon icon="chevron-right"></FontAwesomeIcon>
+            </CardButton>
+          </BottomCardContainer>
         </Card>
         <Card>
           <CardImg src="https://res.cloudinary.com/dg8szh4ec/image/upload/w_400/c_crop,w_400,h_200/v1562101917/pexels-photo-1170979.jpg" />
+          <BottomCardContainer>
+            <CardText>
+              Manufacturers turn to Minerva for customized commercialization
+              strategies that leverage our decades of industry experience,
+              ensuring products reach the patients who need them reliably
+            </CardText>
+            <CardButton>
+              Learn More{" "}
+              <FontAwesomeIcon icon="chevron-right"></FontAwesomeIcon>
+            </CardButton>
+          </BottomCardContainer>
         </Card>
       </CardContainer>
     </Links>
