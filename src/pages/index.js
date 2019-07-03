@@ -1,7 +1,13 @@
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
+library.add(faChevronRight)
+
 const Global = createGlobalStyle`
+
   body{
     background-color: #e1e5ea;
   }
@@ -15,6 +21,7 @@ const Global = createGlobalStyle`
       transform: translateY(0rem)
     }
   }
+
 `
 
 const Background = styled.img`
@@ -40,7 +47,7 @@ const Title = styled.div`
   flex-direction: column;
   padding-top: 7rem;
   padding-left: 5rem;
-  max-width: 45%;
+  max-width: 40%;
 
   @media (max-width: 1600px) {
     padding-top: 5rem;
@@ -83,21 +90,33 @@ const Left = styled.h1`
   font-family: "Montserrat", sans-serif;
   font-size: 3.5rem;
   color: #21262e;
+  @media (max-width: 1600px) {
+    font-size: 3.3rem;
+  }
   @media (max-width: 1400px) {
-    font-size: 2.8rem;
+    font-size: 3rem;
+  }
+  @media (max-width: 1200px) {
+    font-size: 2.6rem;
   }
   @media (max-width: 1000px) {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 `
 
 const Right = styled(Left)`
   color: #606e85;
+  @media (max-width: 1600px) {
+    font-size: 3.3rem;
+  }
   @media (max-width: 1400px) {
-    font-size: 2.8rem;
+    font-size: 3rem;
+  }
+  @media (max-width: 1200px) {
+    font-size: 2.6rem;
   }
   @media (max-width: 1000px) {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 `
 
@@ -147,6 +166,9 @@ const Header = styled.div`
 `
 
 const LearnButton = styled.button`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 0.5rem 0rem;
   border: 3px solid #21262e;
   border-radius: 4px;
@@ -178,7 +200,7 @@ const LearnButton = styled.button`
 `
 
 const HeaderLink = styled.a`
-  font-family: "Roboto", sans-serif;
+  font-family: "Lora", sans-serif;
   font-size: 1.2rem;
   padding: 0.3rem 0rem 0.3rem 2rem;
   &:hover {
@@ -249,14 +271,17 @@ const CardText = styled.div`
 `
 
 const CardButton = styled.button`
-  width: 15rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 12rem;
   outline: none;
   border: 3px solid #e1e5ea;
   border-radius: 4px;
   background-color: #e1e5ea;
   color: #21262e;
   font-family: "Roboto", sans-serif;
-  padding: 0.5rem 0.8rem;
+  padding: 0.3rem 0.5rem;
   font-size: 1.2rem;
   transition-duration: 150ms;
   transition-timing-function: ease-in;
@@ -267,7 +292,7 @@ const CardButton = styled.button`
   }
   @media (max-width: 1300px) {
     width: 11rem;
-    padding: 0.3rem 0.6rem;
+    padding: 0.2rem 0.4rem;
     font-size: 1.1rem;
   }
 `
@@ -288,7 +313,7 @@ const BottomCardContainer = styled.div`
 `
 
 const CardContainer = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -302,7 +327,8 @@ const CardContainer = styled.div`
     margin-top: 30rem;
   }
   @media (max-width: 1300px) {
-    margin-top: 25rem;
+    width: 100%;
+    margin-top: 30rem;
   }
   @media (max-width: 1000px) {
     margin-top: 30rem;
@@ -312,7 +338,9 @@ const CardContainer = styled.div`
     margin-top: 25rem;
   }
   @media (max-width: 600px) {
-    flex-direction: column;
+    margin-top: 20rem;
+  }
+  @media (max-width: 500px) {
     margin-top: 16rem;
   }
 `
@@ -338,7 +366,10 @@ const IndexPage = () => (
           future of local care delivery. We guide medical innovations to market.
           This is what it means to create healthier futures.
         </Text>
-        <LearnButton>Learn More</LearnButton>
+        <LearnButton>
+          Learn More
+          <FontAwesomeIcon icon="chevron-right"></FontAwesomeIcon>
+        </LearnButton>
       </Title>
       <Background src="https://res.cloudinary.com/dg8szh4ec/image/upload/v1562061170/test2.svg"></Background>
     </Container>
@@ -351,7 +382,10 @@ const IndexPage = () => (
               Our partners and clients have specific and complicated use cases,
               find out how we solve these problems.
             </CardText>
-            <CardButton>Learn More</CardButton>
+            <CardButton>
+              Learn More{" "}
+              <FontAwesomeIcon icon="chevron-right"></FontAwesomeIcon>
+            </CardButton>
           </BottomCardContainer>
         </Card>
 
